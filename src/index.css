@@ -1,13 +1,762 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body { 
+  background: linear-gradient(gray, white);
+  font-family: 'Nova Square', 'sans-serif';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.main-header{
+  font-size: 12vh;
+  color: white;
+}
+
+.secondary-text{
+  color: #626262;
+  font-size: 4vh;
+}
+
+.navbar-item{
+  color: #626262;
+  cursor: pointer;
+  margin-left: 16vw;
+  font-size: 3vh;
+  text-decoration: none;
+}
+
+.navbar-item.selected{
+  color: white;
+  font-size: 4vh;
+}
+
+.navbar-item:hover{
+  color: black;
+}
+
+.main-image{
+  max-width: 100vw;
+  max-height: 60vh;
+  margin: 0 auto;
+}
+
+.sign-in-button{
+  background-color: #626262;
+  color: white;
+  font-size: 3vh;
+  width: 15vw;
+  border-width: 0.5vh;
+  border-style: solid;
+  border-color: white;
+  border-radius: 5vh;
+}
+
+.sign-in-button:hover{
+  background: linear-gradient(white, gray);
+  color: black;
+}
+
+.footer-div{
+  background: transparent;
+}
+
+.login-div{
+  background: 'white';
+  border-width: 1vh;
+  border-radius: 3vh;
+  border-style: solid;
+  border-color: #626262;
+  width: 30vw;
+  min-height: 80vh;
+  margin: 0 auto;
+}
+
+.form-text{
+  color: #3f3d5e;
+  font-size: 3vh;
+  text-align: left;
+  margin-left: 6vw;
+  margin-top: 5vh;
+}
+
+.input-area{
+  background-color: 'black';
+  border-width: 0.6vh;
+  margin-left: 2vw;
+  width: 20vw;
+  border-style: solid;
+  border-radius: 5vh;
+  background-color: white;
+  color: #3f3d5e
+}
+
+.submit-button{
+  color: white;
+  border-width: 0.5vh;
+  border-radius: 1vh;
+  border-style: solid;
+  font-size: 3vh;
+  margin-top: 8vh;
+  background: linear-gradient(#3f3d5e, #19B6FF);
+  min-width: 12vw;
+}
+
+.submit-button:hover{
+  background: linear-gradient(black, gray);
+}
+
+.small-form-text{
+  color: #19B6FF;
+  font-size: 1.5vh;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.small-form-text:hover{
+  color: purple;
+}
+
+.code-div{
+  background: #626262;
+  max-width: 75%;
+  height: 20vh;
+  margin: 0 auto;
+  margin-top: 17vh;
+  border-radius: 5vh;
+  border-width: 0.5vh;
+  border-color: black;
+  border-style: solid;
+}
+
+
+.code-input{
+  margin-top: 3.5vh;
+  width: 7vw;
+  height: 13vh;
+  margin-right: 0.8vw;
+  font-size: 5vh;
+  border-radius: 1vh;
+  border-width: 0.5vh;
+  border-color: black;
+  border-style: solid;
+  text-align: center;
+}
+
+.verify-button{
+  margin-top: 9vh !important;
+  margin: 0 auto;
+  text-align: center !important;
+  background: linear-gradient(gray, white);
+  font-size: 8vh;
+  border-style: solid;
+  border-width: 1vh;
+  border-color: black;
+  border-radius: 3vh;
+}
+
+
+.verify-button:hover{
+  background: linear-gradient(black, gray);
+  color: white;
+}
+
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 30vh;
+  height: 30vh;
+}
+
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 30vh;
+  height: 30vh;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 0.7vh solid #fff;
+  border-color: #3f3d5e transparent #3f3d5e transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+  margin-top: 30vh;
+}
+
+
+.dashboard-div{
+  background: linear-gradient(-45deg, black, gray);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	min-height: 100vh;
+}
+
+
+.icon-button{
+  font-size: var(--icon-size);
+  color: var(--color);
+  cursor: pointer;
+  background-color: transparent;
+  border-width: 0px;
+}
+
+.icon-button:hover{
+  cursor: pointer;
+  color: var(--hover-color);
+}
+
+
+.progress-bar-under{
+  width: 50vw;
+  height: 5vh;
+  background: black;
+  border-width: 0.5vh;
+  border-style: solid;
+  border-color: white;
+  border-radius: 5vh;
+  grid-area: 1 / 2;
+}
+
+
+.progress-bar-top{
+  width: var(--width);
+  height: 5vh;
+  background: var(--color);
+  border-radius: 5vh;
+  grid-area: 1 / 2;
+}
+
+
+.progress-bar-title{
+  font-size: 3vh;
+  color: #4920ba;
+}
+
+
+.progress-label{
+    font-size: 3vh;
+    color:whitesmoke;
+}
+
+
+.start-workout-button{
+  font-size: 5vh;
+  color: white;
+  border-width: 0.8vh;
+  border-color: #3f3d5e;
+  border-style: solid;
+  width: 40vw;
+  border-radius: 5vh;
+  background: linear-gradient(black, red);
+  margin-left: 5vw;
+}
+
+
+.start-workout-button:hover{
+  color: black;
+  background: linear-gradient(blue, white)
+}
+
+
+.progress-bars-div{
+  margin-top: 12vh;
+  background: black;
+}
+
+
+.sideBar{
+  background: transparent;
+  width: 10vw;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  border-width: 0.2vh;
+}
+
+
+.sticky-sideBar{
+  background: transparent;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+
+.side-bar-wrapper{
+  position: absolute;
+  top: 0%;
+  height: 100%;
+}
+
+
+.side-bar-item{
+  margin-right: 2vw;
+  margin-top: 3vh;
+}
+
+
+.form-title{
+  color: white;
+  font-size: 8vh;
+}
+
+
+.form-text{
+  color: white;
+  font-size: 5vh;
+}
+
+
+.form-input{
+  width: 25vw;
+  height: 6vh;
+  border-width: 0.5vh;
+  border-radius: 3vh;
+  border-style: solid;
+  border-color: #626262;
+  background: black;
+  color: white;
+  font-size: 4vh;
+}
+
+
+.pop-up-div{
+  position: absolute;
+  width: 50vw;
+  height: 95vh;
+  top: 5%;
+  background: #626262;
+  margin-left: 25vw;
+  border-width: 1vh;
+  border-color: #626262;
+  border-radius: 1vh;
+  z-index: 1;
+  filter: none !important;
+}
+
+
+.workout-button-div{
+  background: white;
+  height: 15vh;
+  width: 50vw;
+  border-color: #626262;
+  border-width: 0.7vh;
+  border-style: solid;
+  border-radius: 3vw;
+  margin-top: 20vh;
+  margin-right: 20vw;
+}
+
+
+.workout-text{
+  font-size: var(--font-size);
+  color: #3f3d5e;
+  margin-right: 7vw;
+  margin-top: 3vh;
+  resize: horizontal;
+}
+
+
+.delete-button{
+  background: linear-gradient(white, red);
+  color: white;
+  font-size: 5vh;
+  border-width: 0px;
+  height: 13.6vh;
+  width: 10vw;
+  cursor: pointer;
+}
+
+
+.delete-button:hover{
+  color: black;
+  background: linear-gradient(#fc0303, black);
+}
+
+
+.edit-button{
+  background: linear-gradient(white, blue);
+  color: white;
+  font-size: 5vh;
+  border-width: 0px;
+  height: 13.6vh;
+  width: 10vw;
+  cursor: pointer;
+  margin-right: 1vw;
+}
+
+
+.edit-button:hover{
+  color: #19B6FF;
+  background: linear-gradient(#3f3d5e, #2b00ff);
+}
+
+
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.mode-button{
+  background: linear-gradient(black, var(--background-color));
+  border-width: 0.7vh;
+  border-radius: 2vh;
+  border-style: solid;
+  border-color: #626262;
+  width: 30vw;
+}
+
+
+.mode-text{
+  font-size: 5vh;
+  color: white;
+  margin-top: 2vh;
+}
+
+
+.mode-text.selected{
+  color: #19B6FF;
+}
+
+
+.mode-button.selected{
+  background: #00ffa6;
+  border-color: #19B6FF;
+}
+
+
+.mode-button:hover{
+  background: #00ffa6;
+  border-color: #19B6FF;
+}
+
+
+.workout-description{
+  font-size: 3vh;
+  color: #fff;
+  text-align: center;
+  margin-top: 8vh;
+}
+
+
+.go-button-workout{
+  background: linear-gradient(#00ffa6, #19B6FF);
+  border-width: 0.5vh;
+  border-color: #626262;
+  border-radius: 5vh;
+  border-style: solid;
+  width: 20vw;
+}
+
+
+.go-button-workout:hover{
+  background: linear-gradient(white, #19B6FF);
+  border-color: #2b00ff;
+}
+
+
+.select-workout-button{
+  background: linear-gradient(black, #4920ba);
+  color: #19B6FF;
+  font-size: 5vh;
+  border-style: solid;
+  border-width: 0.5vh;
+  border-color: black;
+  border-radius: 2vh;
+}
+
+
+.select-workout-button.selected, .select-workout-button:hover{
+  background: linear-gradient(#19B6FF, #00ffa6);
+  border-color: white;
+  color: white;
+}
+
+
+.select-workout-div{
+  background: transparent;
+  max-width: 99vw;
+  height: 40vh;
+  overflow-y: scroll;
+  margin-top: 20vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  border-style: solid;
+  border-width: 0.5vh;
+  border-color: black;
+  border-radius: 1vh;
+}
+
+
+ul{
+  list-style-type: none !important;
+}
+
+
+.countdown-number{
+  color: #fc0303;
+  font-size: 12vh;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 25vh;
+}
+
+
+.current-exercise{
+  color: #fc0303;
+  font-size: 8vh;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 3vh;
+}
+
+
+.exercise-progress-div-under{
+  position: absolute;
+  width: 60vw;
+  height: 5vh;
+  background: #626262;
+  border-radius: 5vh;
+  border-width: 0.5vh;
+  border-color: #19B6FF;
+  border-style: solid;
+  top: 88%;
+  margin-left: 20vw;
+}
+
+
+.exercise-progress-div-over{
+  position: absolute;
+  width: var(--width);
+  height: 5vh;
+  background: #19B6FF;
+  border-radius: 5vh;
+  top: 88%;
+  margin-left: 20vw;
+}
+
+
+.workout-progress-div-under{
+  background: #626262;
+  width: 80vw;
+  height: 5vh;
+  margin-left: 10vw;
+  margin-top: 5vh;
+  border-width: 0.5vh;
+  border-radius: 5vh;
+  border-style: solid;
+  border-color: #19B6FF;
+  position: absolute;
+}
+
+
+.workout-progress-div-over{
+  background: linear-gradient(#2b00ff, #00ffa6);
+  width: var(--width);
+  height: 5vh;
+  margin-left: 10vw;
+  margin-top: 5vh;
+  border-width: 0.5vh;
+  border-radius: 5vh;
+  border-style: solid;
+  border-color: #19B6FF;
+  position: absolute;
+}
+
+
+.pause-button{
+  background: transparent;
+  color: #fff;
+  font-size: 7vw;
+  margin-left: 36vw;
+  border: none;
+}
+
+
+.pause-button.resume{
+  color: #00ffa6;
+}
+
+
+.stop-button{
+  background: transparent;
+  color: black;
+  font-size: 7vw;
+  margin-left: 10vw;
+  border: none;
+}
+
+
+.stop-button:hover{
+  color: white;
+}
+
+
+.pause-button:hover{
+  color: black;
+}
+
+
+.settings-field-div{
+  background: #00c753;
+  border-width: 0.5vh;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5vh;
+  width: 30vw;
+  height: 10vh;
+}
+
+
+.log-out-button{
+  background: #f00000;
+  width: 20vw;
+  border-radius: 5vh;
+  border-width: 0.5vh;
+  border-color: black;
+  color: black
+}
+
+
+.log-out-button:hover{
+  background: linear-gradient(black, red);
+  color: white;
+  border-color: #fff;
+}
+
+
+.food-option-button{
+  background: #3f3d5e;
+  font-size: 5vh;
+  border-width: 0.5vh;
+  border-radius: 10vh;
+  border-color: black;
+  color: white;
+  width: 40vw;
+}
+
+
+.food-option-button:hover{
+  color: white;
+  background: linear-gradient(white, #00ffa6);
+  border-color: #19B6FF;
+}
+
+
+.predictor-div{
+  background: #3f3d5e;
+  margin-left: 14vw;
+  width: 80vw;
+  height: 95vh;
+  text-align: center;
+  margin-top: 6vh;
+  border-radius: 5vh;
+  border-width: 0.5vh;
+  border-color: #19B6FF;
+  border-style: solid;
+}
+
+
+.result-pop-up{
+  position: absolute;
+  background: #717a99;
+  width: 60vw;
+  height: 60vh;
+  top: 35%;
+  left: 25%;
+  border-color: black;
+  border-width: 0.5vh;
+  border-style: solid;
+  border-radius: 5vh;
+}
+
+
+.webcam-div{
+  background: linear-gradient(#3f3d5e, #4920ba);
+  border-width : 0.5vh;
+  border-color: #3f3d5e;
+  border-radius: 5vh;
+  border-style: solid;
+  width: 46vw;
+  height: 75vh;
+  position: relative;
+  margin-left: 22vw;
+}
+
+
+.barcode-focus-div{
+  position: absolute;
+  width: 15vw;
+  height: 10vw;
+  background: transparent;
+  border-width: 0.5vh;
+  border-color: black;
+  border-radius: 1vh;
+  border-style: solid;
+  margin-left: 42.5vw;
+  margin-top: 33vh;
+  z-index: 1;
+}
+
+
+.food-info-pop-up{
+  width: 75vw;
+  height: 78vh;
+  background: #626262;
+  border-width: 0.5vh;
+  border-color: #717a99;
+  border-radius: 5vh;
+  border-style: solid;
+  margin-left: 12.5vw;
+  margin-top: 10vh;
+}
+
+
+.selection-box{
+  background: #3f3d5e;
+  border-color: #626262;
+  border-width: 0.5vh;
+  border-radius: 3vh;
+  border-style: solid;
+  color: white;
+  font-size: 5vh;
+  width: 15vw;
+  height: 8vh;
+}
+
+
+.tracker-button{
+  background: transparent;
+  border-width: 0.1vw;
+  border-color: #3f3d5e;
+  border-radius: 2vh;
+  border-style: solid;
+  height: 40vh;
+}
+
+
+.tracker-button:hover{
+  background: linear-gradient(#00ffa6, #19B6FF)
+}
+
+
+
+/* animations */
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
